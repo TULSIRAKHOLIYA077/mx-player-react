@@ -61,37 +61,37 @@ const Login = () => {
     setSignUp(!isSignUp);
   }
   return (
-    <div className="bg-[#010101] w-[100%] h-[100vh] text-white">
+    <div className="bg-[#010101] w-[100%] h-[100vh] overflow-hidden text-white">
       <Header/>
-      <div className="p-16">
-        <div className="flex flex-col items-center w-[50%] m-auto border-2 rounded-xl border-zinc-500 p-4">
-          <h1 className="font-bold text-3xl text-center">
+      <div className="p-16 w-[100%] h-[100vh] flex justify-center items-center">
+        <div className="flex flex-col items-center w-[100%] sm:w-[50%] m-auto border-2 rounded-xl border-zinc-500 p-1 sm:p-4">
+          <h1 className="font-bold text-xl sm:text-3xl text-center">
             {isSignUp ? "Sign Up" : "Sign In"}
           </h1>
-          <p className="text-zinc-500 text-lg p-3 font-semibold">Premium OTT service in India, where you can watch original series, TV & Web shows, movies, and trending shows for free.</p>
+          <p className="text-zinc-500 sm:text-lg pt-2 sm:p-3 font-semibold text-center">Premium OTT service in India, where you can watch original series, TV & Web shows, movies, and trending shows for free.</p>
 
-          <form onSubmit={(e)=> e.preventDefault()} className="w-[70%] m-3 flex flex-col items-center" action="">
+          <form onSubmit={(e)=> e.preventDefault()} className="w-[70%] m-5 sm:m-3 flex flex-col items-center " action="">
             {isSignUp && <input 
-            className="bg-transparent border rounded-md w-full p-3" value={name}  
+            className="bg-transparent border rounded-md w-full p-1 sm:p-3" value={name}  
             type="text" 
             placeholder="Name" 
             onChange={(e) => setName(e.target.value)}
             required
             />                    
             }
-            <input className="bg-transparent border rounded-md w-full p-3 mt-7" value={email} type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
+            <input className="bg-transparent border rounded-md w-full p-1 sm:p-3 mt-7" value={email} type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
 
-            <input className="bg-transparent border rounded-md w-full p-3 mt-7" value={password} type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
+            <input className="bg-transparent border rounded-md w-full p-1 sm:p-3 mt-7" value={password} type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
 
-            <p className="text-white font-bold text-lg mt-5">
+            <p className="text-white font-bold sm:text-lg mt-5">
               {errorMessage}
             </p>
 
-            <button className="bg-[#0079FF] rounded-md w-full p-3 mt-7" onClick={handleButtonClick}>
+            <button className="bg-[#0079FF] rounded-md w-full p-1 sm:p-3 mt-7" onClick={handleButtonClick}>
             {isSignUp ? "Sign Up" : "Sign In"}
             </button>
 
-            <p className="mt-7 cursor-pointer" onClick={toggleSignUpForm}>
+            <p className="mt-3 sm:mt-7 cursor-pointer" onClick={toggleSignUpForm}>
               {isSignUp ? "Already registered? Sign in now..." : "New to MXPLAYER? Sign up now."}
             </p>
           </form>

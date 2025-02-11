@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import VideoBackground from "./VideoBackground";
 import VideoTitle from "./VideoTitle";
-import useImageSlider from "../hooks/useImageSlider";
+import useShowsImageSlider from "../hooks/useShowsImageSlider";
 
-const MainContainer = () => {
-  const imageData = useSelector((store) => store.mainImageData?.mainImageData);
+const ShowsMainContainer = () => {
+  const imageData = useSelector((store) => store.mainImageData?.showsMainImageData);
 
   const [language, setLanguage] = useState(null);
   const [genres, setGenres] = useState([]);
@@ -14,20 +14,20 @@ const MainContainer = () => {
   const [rating, setRating] = useState(null);
   const [titleImage, setTitleImage] = useState(null);
 
-  const mainImage1 = useSelector((store) => store.movies.movieListOne?.[0]?.titleContentImageInfo?.[0]?.url);
-  const mainImage1Data = useSelector((store) => store.movies.movieListOne?.[0]);
+  const mainImage1 = useSelector((store) => store.shows.movieListOne?.[7]?.titleContentImageInfo?.[0]?.url);
+  const mainImage1Data = useSelector((store) => store.shows.movieListOne?.[7]);
 
-  const mainImage2 = useSelector((store) => store.movies.movieListThree?.[0]?.titleContentImageInfo?.[0]?.url);
-  const mainImage2Data = useSelector((store) => store.movies.movieListThree?.[0]);
+  const mainImage2 = useSelector((store) => store.shows.movieListTwo?.[7]?.titleContentImageInfo?.[0]?.url);
+  const mainImage2Data = useSelector((store) => store.shows.movieListTwo?.[7]);
 
-  const mainImage3 = useSelector((store) => store.movies.movieListSeven?.[0]?.titleContentImageInfo?.[0]?.url);
-  const mainImage3Data = useSelector((store) => store.movies.movieListSeven?.[0]);
+  const mainImage3 = useSelector((store) => store.shows.movieListThree?.[7]?.titleContentImageInfo?.[0]?.url);
+  const mainImage3Data = useSelector((store) => store.shows.movieListThree?.[7]);
 
-  const mainImage4 = useSelector((store) => store.movies.movieListEleven?.[0]?.titleContentImageInfo?.[0]?.url);
-  const mainImage4Data = useSelector((store) => store.movies.movieListEleven?.[0]);
+  const mainImage4 = useSelector((store) => store.shows.movieListFour?.[7]?.titleContentImageInfo?.[0]?.url);
+  const mainImage4Data = useSelector((store) => store.shows.movieListFour?.[7]);
 
-  const mainImage5 = useSelector((store) => store.movies.movieListFifteen?.[0]?.titleContentImageInfo?.[0]?.url);
-  const mainImage5Data = useSelector((store) => store.movies.movieListFifteen?.[0]);
+  const mainImage5 = useSelector((store) => store.shows.movieListFive?.[7]?.titleContentImageInfo?.[0]?.url);
+  const mainImage5Data = useSelector((store) => store.shows.movieListFive?.[7]);
 
   const allImages = [mainImage1, mainImage2, mainImage3, mainImage4, mainImage5];
   const allImagesData = [mainImage1Data, mainImage2Data, mainImage3Data, mainImage4Data, mainImage5Data];
@@ -48,7 +48,7 @@ const MainContainer = () => {
     }
   }, [imageData]);
 
-  const { mainImage, nextImage, previousImage } = useImageSlider(allImages, allImagesData);
+  const { mainImage, nextImage, previousImage } = useShowsImageSlider(allImages, allImagesData);
 
   return (
     <div className="relative">
@@ -69,4 +69,4 @@ const MainContainer = () => {
   );
 };
 
-export default MainContainer;
+export default ShowsMainContainer;

@@ -1,7 +1,14 @@
+import useTrailerMListOne from "../hooks/useTrailerMListOne";
+import useTrailerMListTwo from "../hooks/useTrailerMListTwo";
+import TrailerContainer from "./TrailerContainer";
+
 const Trailer = ()=> {
+  useTrailerMListOne();
+  useTrailerMListTwo();
+
   return (
     <div>
-      Tailer
+      <TrailerContainer/>
     </div>
   )
 }

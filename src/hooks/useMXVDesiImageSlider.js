@@ -1,9 +1,9 @@
 
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addMainImageData } from "../utils/mainImageDataSlice";
+import { addMXVDesiMainImageData } from "../utils/mainImageDataSlice";
 
-const useImageSlider = (allImages, allImagesData) => {
+const useMXVDesiImageSlider = (allImages, allImagesData) => {
   const dispatch = useDispatch();
   
   const [mainImage, setMainImage] = useState(null); 
@@ -12,7 +12,7 @@ const useImageSlider = (allImages, allImagesData) => {
   useEffect(() => {
     if (allImages.length > 0 && !mainImage) {
       setMainImage(allImages[0]);
-      dispatch(addMainImageData(allImagesData[0]));
+      dispatch(addMXVDesiMainImageData(allImagesData[0]));
     }
   }, [allImages, mainImage, allImagesData]); 
 
@@ -21,7 +21,7 @@ const useImageSlider = (allImages, allImagesData) => {
       const newIndex = prevIndex + 1;
       const updatedIndex = newIndex < allImages.length ? newIndex : allImages.length - 1; 
       setMainImage(allImages[updatedIndex]);
-      dispatch(addMainImageData(allImagesData[updatedIndex]));
+      dispatch(addMXVDesiMainImageData(allImagesData[updatedIndex]));
       return updatedIndex;
     });
   };
@@ -31,7 +31,7 @@ const useImageSlider = (allImages, allImagesData) => {
       const newIndex = prevIndex - 1;
       const updatedIndex = newIndex >= 0 ? newIndex : 0; 
       setMainImage(allImages[updatedIndex]);
-      dispatch(addMainImageData(allImagesData[updatedIndex]));
+      dispatch(addMXVDesiMainImageData(allImagesData[updatedIndex]));
       return updatedIndex;
     });
   };
@@ -43,4 +43,4 @@ const useImageSlider = (allImages, allImagesData) => {
   };
 };
 
-export default useImageSlider;
+export default useMXVDesiImageSlider;

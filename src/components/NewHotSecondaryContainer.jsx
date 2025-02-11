@@ -1,0 +1,26 @@
+import MovieList from "./MovieList";
+import { useSelector } from "react-redux";
+
+const NewHotSecondaryContainer = () => {
+  const allMovieList = useSelector((store)=> store.newHot);
+
+  return allMovieList.movieListOne && (
+    <div className="px-[5%] bg-[#121212]">
+      <div className="relative z-40 -mt-28">
+        <MovieList title={allMovieList.movieListOneTitle} movies={allMovieList.movieListOne}/>
+
+        {
+          !allMovieList.movieListTwo ? 'Loading' : (<MovieList title={allMovieList.movieListTwoTitle} movies={allMovieList.movieListTwo}/>)
+        }
+        {      
+          !allMovieList.movieListThree ? 'Loading' : (<MovieList title={allMovieList.movieListThreeTitle} movies={allMovieList.movieListThree}/>)
+        }
+        {       
+          !allMovieList.movieListFour ? 'Loading' : (<MovieList title={allMovieList.movieListFourTitle} movies={allMovieList.movieListFour}/>)
+        }
+      </div>
+    </div>
+  )
+}
+
+export default NewHotSecondaryContainer;
