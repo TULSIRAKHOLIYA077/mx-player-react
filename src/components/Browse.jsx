@@ -11,8 +11,8 @@ const Browse = () => {
   useMovieListOne();
   useMovieListThree();
   useMovieListSeven();
-  useMovieListEleven();
-  useMovieListFifteen();
+  // useMovieListEleven();
+  // useMovieListFifteen();
 
   return (
     <div>

@@ -35,10 +35,10 @@ const SecondaryContainer = () => {
         {       
           !allMovieList.movieListTen ? 'Loading' : (<MovieList title={allMovieList.movieListTenTitle} movies={allMovieList.movieListTen}/>)
         }
-        {       
-          !allMovieList.movieListEleven ? 'Loading' : (<MovieList title={allMovieList.movieListElevenTitle} movies={allMovieList.movieListEleven}/>)
-        }
-        {       
+        {/* {       
+          allMovieList.movieListEleven ? (<MovieList title={allMovieList.movieListElevenTitle} movies={allMovieList.movieListEleven}/>) : null
+        } */}
+        {/* {       
           !allMovieList.movieListTwelve ? 'Loading' : (<MovieList title={allMovieList.movieListTwelveTitle} movies={allMovieList.movieListTwelve}/>)
         }
         {       
@@ -62,7 +62,7 @@ const SecondaryContainer = () => {
           !allMovieList.movieListEightteen ? 'Loading' : (
             <MovieList title={allMovieList.movieListEightteenTitle} movies={allMovieList.movieListEightteen} />
           )
-        }
+        } */}
 
       </div>
     </div>

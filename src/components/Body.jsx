@@ -30,7 +30,7 @@ const Body = () => {
         {
           path: "/shows",
           element: (
-            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-12 ml-20">Loading...</h1>}>
+            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-32 md:mt-12 ml-20">Loading...</h1>}>
               <Shows />
             </Suspense>
           )
@@ -38,7 +38,7 @@ const Body = () => {
         {
           path: "/allmovies",
           element: (
-            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-12 ml-20">Loading...</h1>}>
+            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-32 md:mt-12 ml-20">Loading...</h1>}>
               <AllMovies />
             </Suspense>
           )
@@ -46,7 +46,7 @@ const Body = () => {
         {
           path: "/newhot",
           element:  (
-            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-12 ml-20">Loading...</h1>}>
+            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-32 md:mt-12 ml-20">Loading...</h1>}>
               <NewHot />
             </Suspense>
           )
@@ -54,7 +54,7 @@ const Body = () => {
         {
           path: "/vdesi",
           element:  (
-            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-12 ml-20">Loading...</h1>}>
+            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-32 md:mt-12 ml-20">Loading...</h1>}>
               <Vdesi />
             </Suspense>
           )
@@ -62,7 +62,7 @@ const Body = () => {
         {
           path: "/trailer",
           element: (
-            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-12 ml-20">Loading...</h1>}>
+            <Suspense fallback={<h1 className="text-[#1279FF] font-bold text-3xl mt-28 sm:mt-32 md:mt-12 ml-20">Loading...</h1>}>
               <Trailer />
             </Suspense>
           )

@@ -13,11 +13,7 @@ const useNewHotMListThree = ()=> {
       dispatch(addmovieListThree({movieListThree:json.sections[0].items, movieListThreeTitle:json.sections[0].name}));
 
       dispatch(addmovieListFour({movieListFour:json.sections[1].items, movieListFourTitle:json.sections[1].name}));
-
-
-
-  
-    }
+}
   
     useEffect(()=>{
       newHotListThree();

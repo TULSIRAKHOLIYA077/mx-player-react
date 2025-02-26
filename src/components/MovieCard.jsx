@@ -23,7 +23,7 @@ const MovieCard = ({ imgUrl, movie, isInMyList }) => {
   };
 
   return (
-    <div className="w-32 sm:w-44 relative group">
+    <div className="w-32 sm:w-36 md:w-44 relative group">
       <div className="absolute z-10 w-[100%] h-[100%] bg-white bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
       <div className="absolute z-20 top-[45%] left-[45%] opacity-0 group-hover:opacity-100 transition-opacity">
         {isAdded ? (

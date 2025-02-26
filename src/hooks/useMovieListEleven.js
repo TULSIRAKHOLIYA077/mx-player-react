@@ -10,7 +10,7 @@ const useMovieListEleven = ()=> {
   
       const json = await data.json();
   
-      dispatch(addmovieListEleven({movieListEleven:json.sections[0].items, movieListElevenTitle:json.sections[0].name}));
+      // dispatch(addmovieListEleven({movieListEleven:json.sections[0].items, movieListElevenTitle:json.sections[0].name}));
 
       dispatch(addmovieListTwelve({movieListTwelve:json.sections[1].items, movieListTwelveTitle:json.sections[1].name}));
 

@@ -14,7 +14,7 @@ const ShowsMainContainer = () => {
   const [rating, setRating] = useState(null);
   const [titleImage, setTitleImage] = useState(null);
 
-  const mainImage1 = useSelector((store) => store.shows.movieListOne?.[7]?.titleContentImageInfo?.[0]?.url);
+  const mainImage1 = useSelector((store) => store.shows.movieListOne?.[7]?.titleContentImageInfo?.[0].url);
   const mainImage1Data = useSelector((store) => store.shows.movieListOne?.[7]);
 
   const mainImage2 = useSelector((store) => store.shows.movieListTwo?.[7]?.titleContentImageInfo?.[0]?.url);

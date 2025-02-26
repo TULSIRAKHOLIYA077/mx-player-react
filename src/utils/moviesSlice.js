@@ -94,7 +94,7 @@ const moviesSlice = createSlice({
     addmovieListEleven: (state,action) =>{      
       const {movieListElevenTitle,movieListEleven} =  action.payload;
       state.movieListElevenTitle = movieListElevenTitle;
-      state.movieListEleven = movieListEleven; 
+      state.movieListEleven = movieListEleven ? movieListEleven : null; 
     },
     addmovieListTwelve: (state,action) =>{      
       const {movieListTwelveTitle,movieListTwelve} =  action.payload;

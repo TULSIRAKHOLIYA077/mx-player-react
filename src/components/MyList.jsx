@@ -20,10 +20,10 @@ const MyList = () => {
 
   return (
     <div className="bg-[#121212ea] relative w-[100%] min-h-[100vh]">
-      <div className="relative pt-28 sm:pt-16 sm:px-16 text-white flex flex-col items-center ">
+      <div className="relative pt-36 sm:pt-32 md:pt-16 md:px-16 text-white flex flex-col items-center ">
         <div className="">
           <button
-            className="bg-[#434242] flex items-center py-2 px-3 gap-1 text-xl font-bold rounded-lg cursor-pointer"
+            className="bg-[#434242] flex items-center mt-10 sm:mt-0 py-2 px-3 gap-1 text-xl font-bold rounded-lg cursor-pointer"
             onClick={clearList}
           >
             Clear List
