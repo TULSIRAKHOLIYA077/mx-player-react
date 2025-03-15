@@ -1,6 +1,7 @@
 import MovieCard from "./MovieCard";
 
 const MovieList = ({title,movies}) => {
+  const defaultImg = "pic/d1924002234d9096126aaee2ff997632/en/2x3/320x480/test_pic1741593568781_badged_1741593572274.webp";
   return(
     <div className="mt-8">
       <h1 className="text-[#AAAAAA] font-bold text-xl md:text-2xl">{title}</h1>
@@ -14,7 +15,7 @@ const MovieList = ({title,movies}) => {
             return (
               <MovieCard
                 key={movie.id}
-                imgUrl={imageUrl}
+                imgUrl={imageUrl || defaultImg}
                 movie={movie}
               />
             );
